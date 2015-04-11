@@ -1,0 +1,32 @@
+<div class="list" ng-controller='AddUserController'>
+  <div class="row">
+      <div class="small-12 columns"><h1>Create User</h1></div>
+  </div>
+	<form>
+	  <div class="row">
+          <div class="small-11 columns">
+            <input ng-model="name" type="text" placeholder="name">
+          </div>
+          <div class="small-1 column">
+              <span ng-show="nameError" style="color:red">*</span>
+          </div>
+      </div>
+
+        <div class="row">
+            <div class="small-11 columns">
+                <input ng-model="email" type="text" placeholder="email">
+            </div>
+            <div class="small-1 column">
+                <span ng-show="emailError" style="color:red">*</span>
+            </div>
+        </div>
+
+    <div class="text-center">
+      <button ng-click="createUser()" class="button tiny info">Create</button>
+    </div>
+
+    {{displayText}}
+
+  </form>
+</div>
+
